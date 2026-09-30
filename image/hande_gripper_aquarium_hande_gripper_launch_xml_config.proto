@@ -1,0 +1,7 @@
+// Configuration of the Hand-E gripper service. It has no settings; the
+// entrypoint only uses it to recognize the service's runtime config.
+syntax = "proto3";
+
+package ai.intrinsic;
+
+message HandeGripperAquariumHandeGripperLaunchXmlConfig {}

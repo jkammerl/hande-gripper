@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="zenoh_router" default="tcp/zenoh-router.app-intrinsic-base.svc.cluster.local:7447" />
+  <arg name="world_service_address" default="world.app-intrinsic-base.svc.cluster.local:8080" />
+  <group>
+    <push-ros-namespace namespace="gripper" />
+    <node pkg="hande_gripper_sim_driver" exec="hande_gripper_sim_driver_node" name="gripper_action_controller" output="both">
+      <param name="zenoh_router" value="$(var zenoh_router)" />
+      <param name="world_service_address" value="$(var world_service_address)" />
+    </node>
+  </group>
+</launch>

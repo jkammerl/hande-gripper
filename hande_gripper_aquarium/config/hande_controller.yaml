@@ -1,0 +1,18 @@
+/gripper/controller_manager:
+  ros__parameters:
+    update_rate: 10 # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    gripper_action_controller:
+      type: parallel_gripper_action_controller/GripperActionController
+
+/gripper/gripper_action_controller:
+  ros__parameters:
+    action_monitor_rate: 20.0 # Hz
+    joint: robotiq_hande_left_finger_joint
+    goal_tolerance: 0.005 # m
+    allow_stalling: true
+    stall_velocity_threshold: 0.001 # m/s
+    stall_timeout: 5.0 # s

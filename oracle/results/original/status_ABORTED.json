@@ -1,0 +1,16 @@
+{
+  "done": true,
+  "captured_queries": [
+    {
+      "key": "gripper_cmd",
+      "parameters": "",
+      "payload_hex": "0a2b121f726f626f7469715f68616e64655f6c6566745f66696e6765725f6a6f696e741a089a9999999999993f",
+      "encoding": "zenoh/bytes",
+      "attachment_hex": null
+    }
+  ],
+  "error": {
+    "code": 13,
+    "message": "Skill ai.intrinsic.gripper_cmd_skill returned an error during Execute (code: INTERNAL). Message: Skill action failed: ABORTED"
+  }
+}

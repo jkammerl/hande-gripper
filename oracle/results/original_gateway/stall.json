@@ -1,0 +1,39 @@
+{
+  "replies": [
+    {
+      "after_s": 0.31,
+      "key": "gripper_cmd",
+      "encoding": "zenoh/bytes",
+      "payload_hex": "0a0953554343454544454412400a090a00120568616e6465121f726f626f7469715f68616e64655f6c6566745f66696e6765725f6a6f696e741a0800000000000000002a0800000000000004401801",
+      "as_GripperCmdResult": "status: \"SUCCEEDED\"\nstate {\n  header {\n    stamp {\n    }\n    frame_id: \"hande\"\n  }\n  name: \"robotiq_hande_left_finger_joint\"\n  position: 0\n  effort: 2.5\n}\nstalled: true\n"
+    }
+  ],
+  "query_s": 0.31,
+  "goals": [
+    {
+      "name": [
+        "robotiq_hande_left_finger_joint"
+      ],
+      "position": [
+        0.0
+      ],
+      "velocity": [],
+      "effort": [],
+      "frame_id": ""
+    }
+  ],
+  "gateway_log_tail": [
+    "[ZENOH QUERY] Responding on key: 'gripper_cmd' (79 bytes): goo.gle/debugonly   status: \"SUCCEEDED\" state { header { stamp { } frame_id: \"hande\" } name: \"robotiq_hande_left_finger_joint\" position: 0 effort: 2.5 } stalled: true",
+    "[ZENOH QUERY] Replied successfully.",
+    "========================================================",
+    "[INFO] [1790809517.534504445] [aquarium_gateway]: Starting aquarium_gateway...",
+    "[INFO] [1790809517.537398859] [aquarium_gateway]: Resource registration skipped (resource_name or capability empty).",
+    "[INFO] [1790809517.562526922] [aquarium_gateway]: Loading configuration: /workspace/aquarium.yaml",
+    "[INFO] [1790809517.584994779] [aquarium_gateway]: ZENOH: Opening session (mode: peer, connect: [\"tcp/zenoh-router:7447\"])...",
+    "[INFO] [1790809517.662268757] [aquarium_gateway]: GRPC: Server listening on 0.0.0.0:50051",
+    "[INFO] [1790809518.103105232] [aquarium_gateway]: ZENOH: Mapped queryable on key 'gripper_cmd'",
+    "[INFO] [1790809518.103448523] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790809518.103956523] [aquarium_gateway]:   aquarium_gateway online",
+    "[INFO] [1790809518.104028231] [aquarium_gateway]: ==============================================="
+  ]
+}

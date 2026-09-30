@@ -1,0 +1,18 @@
+# proto-file: https://github.com/intrinsic-ai/sdk/blob/main/intrinsic/skills/proto/skill_manifest.proto
+# proto-message: intrinsic_proto.skill.SkillManifest
+id {
+  package: "ai.intrinsic"
+  name: "gripper_cmd_skill"
+}
+display_name: "Gripper Cmd Skill"
+vendor {
+  display_name: "Intrinsic"
+}
+options {
+  supports_cancellation: false
+  cc_config {
+    create_skill: "::GripperCmdSkill::CreateSkill"
+  }
+}
+parameter { message_full_name: "ai.intrinsic.GripperCmdParams" }
+return_type { message_full_name: "ai.intrinsic.GripperCmdResult" }

@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find-pkg-share hande_gripper_sim_driver)/launch/hande_gripper.launch.xml">
+  </include>
+  <node pkg="aquarium_gateway" exec="aquarium_gateway" name="aquarium_gateway">
+    <param name="config_file" value="/workspace/aquarium.yaml"/>
+  </node>
+</launch>

@@ -1,0 +1,9 @@
+# Native ROS 2 image with a scripted ParallelGripperCommand action server, used
+# to exercise gateway implementations.
+FROM docker.io/library/ros:lyrical
+RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y --no-install-recommends \
+      ros-lyrical-control-msgs ros-lyrical-rmw-zenoh-cpp \
+    && rm -rf /var/lib/apt/lists/*
+ENV RMW_IMPLEMENTATION=rmw_zenoh_cpp
+COPY fake_gripper_server.py gripper_client.py /
+ENTRYPOINT ["/ros_entrypoint.sh", "python3", "/fake_gripper_server.py"]

@@ -1,0 +1,30 @@
+--- a/robotiq_hande_driver/bringup/config/hande_controller.yaml
++++ b/robotiq_hande_driver/bringup/config/hande_controller.yaml
+@@ -14,15 +14,15 @@
+   gripper_action_controller:
+     ros__parameters:
+       action_monitor_rate: 20.0 # Hz
+-      joint: $(var tf_prefix)robotiq_hande_left_finger_joint
+-      goal_tolerance: 0.01 # m
+-      allow_stalling: false
+-      stall_velocity_threshold: 0.001 # m/s
+-      stall_timeout: 1.0 # s
+-      max_effort_interface: ""
+-      max_effort: 10.0 # N
+-      max_velocity_interface: ""
+-      max_velocity: 0.1 # m/s
+-      state_interfaces:
+-        - position
+-        - velocity
++      joint: robotiq_hande_left_finger_joint
++      # goal_tolerance: 0.01 # m
++      # allow_stalling: false
++      # stall_velocity_threshold: 0.001 # m/s
++      # stall_timeout: 1.0 # s
++      # max_effort_interface: ""
++      # max_effort: 10.0 # N
++      # max_velocity_interface: ""
++      # max_velocity: 0.1 # m/s
++      # state_interfaces:
++      #   - position
++      #   - velocity
