@@ -1,0 +1,19 @@
+{
+  "replies": [],
+  "query_s": 0.0,
+  "goals": [],
+  "gateway_log_tail": [
+    "CONFIG LOADED: Mapped Zenoh key 'gripper_cmd' -> ROS action client /gripper/gripper_action_controller/gripper_cmd",
+    "[ZENOH QUERY] Payload size: 2 bytes",
+    "ZENOH ERROR: Failed to dynamically deserialize Protobuf payload.",
+    "[INFO] [1790811559.413404071] [aquarium_gateway]: Starting aquarium_gateway...",
+    "[INFO] [1790811559.413663112] [aquarium_gateway]: Resource registration skipped (resource_name or capability empty).",
+    "[INFO] [1790811559.413756237] [aquarium_gateway]: Loading configuration: /workspace/aquarium.yaml",
+    "[INFO] [1790811559.473787982] [aquarium_gateway]: ZENOH: Opening session (mode: peer, connect: [\"tcp/zenoh-router:7447\"])...",
+    "[INFO] [1790811559.977287052] [aquarium_gateway]: ZENOH: Mapped queryable on key 'gripper_cmd'",
+    "[INFO] [1790811559.977420302] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811559.977507094] [aquarium_gateway]:   aquarium_gateway online",
+    "[INFO] [1790811559.977593010] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811559.981226007] [aquarium_gateway]: GRPC: Server listening on 0.0.0.0:50051"
+  ]
+}

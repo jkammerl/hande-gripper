@@ -1,0 +1,27 @@
+{
+  "replies": [
+    {
+      "after_s": 5.11,
+      "key": "gripper_cmd",
+      "encoding": "zenoh/bytes",
+      "payload_hex": "0a634641494c45443a2052656d6f74652074617267657420616374696f6e2073657276657220272f6d697373696e672f677269707065725f636d6427206f66666c696e65206f7220756e726561636861626c652061667465722035732074696d656f75742e",
+      "as_GripperCmdResult": "status: \"FAILED: Remote target action server \\'/missing/gripper_cmd\\' offline or unreachable after 5s timeout.\"\n"
+    }
+  ],
+  "query_s": 5.11,
+  "goals": [],
+  "gateway_log_tail": [
+    "[ZENOH QUERY] Replied successfully.",
+    "========================================================",
+    "[INFO] [1790811469.821706676] [aquarium_gateway]: Starting aquarium_gateway...",
+    "[INFO] [1790811469.825416715] [aquarium_gateway]: Resource registration skipped (resource_name or capability empty).",
+    "[INFO] [1790811469.855119234] [aquarium_gateway]: Loading configuration: /workspace/aquarium.yaml",
+    "[INFO] [1790811469.886577918] [aquarium_gateway]: ZENOH: Opening session (mode: peer, connect: [\"tcp/zenoh-router:7447\"])...",
+    "[INFO] [1790811469.921466766] [aquarium_gateway]: ZENOH: Mapped queryable on key 'gripper_cmd'",
+    "[INFO] [1790811469.921665182] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811469.921720765] [aquarium_gateway]:   aquarium_gateway online",
+    "[INFO] [1790811469.921768474] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811469.963167692] [aquarium_gateway]: GRPC: Server listening on 0.0.0.0:50051",
+    "GATEWAY ERROR: Remote target action server '/missing/gripper_cmd' offline or unreachable after 5s timeout."
+  ]
+}

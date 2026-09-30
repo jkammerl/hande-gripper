@@ -1,0 +1,39 @@
+{
+  "replies": [
+    {
+      "after_s": 0.07,
+      "key": "gripper_cmd",
+      "encoding": "zenoh/bytes",
+      "payload_hex": "0a2b4641494c45443a20476f616c207761732072656a656374656420627920616374696f6e207365727665722e",
+      "as_GripperCmdResult": "status: \"FAILED: Goal was rejected by action server.\"\n"
+    }
+  ],
+  "query_s": 0.07,
+  "goals": [
+    {
+      "name": [
+        "robotiq_hande_left_finger_joint"
+      ],
+      "position": [
+        0.025
+      ],
+      "velocity": [],
+      "effort": [],
+      "frame_id": ""
+    }
+  ],
+  "gateway_log_tail": [
+    "CONFIG LOADED: Mapped Zenoh key 'gripper_cmd' -> ROS action client /gripper/gripper_action_controller/gripper_cmd",
+    "[ZENOH QUERY] Payload size: 45 bytes",
+    "[ZENOH QUERY] Replied successfully.",
+    "[INFO] [1790811275.418619383] [aquarium_gateway]: Starting aquarium_gateway...",
+    "[INFO] [1790811275.419374591] [aquarium_gateway]: Resource registration skipped (resource_name or capability empty).",
+    "[INFO] [1790811275.419461383] [aquarium_gateway]: Loading configuration: /workspace/aquarium.yaml",
+    "[INFO] [1790811275.476236880] [aquarium_gateway]: ZENOH: Opening session (mode: peer, connect: [\"tcp/zenoh-router:7447\"])...",
+    "[INFO] [1790811275.980262283] [aquarium_gateway]: ZENOH: Mapped queryable on key 'gripper_cmd'",
+    "[INFO] [1790811275.980396991] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811275.980480783] [aquarium_gateway]:   aquarium_gateway online",
+    "[INFO] [1790811275.980561949] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811275.986226695] [aquarium_gateway]: GRPC: Server listening on 0.0.0.0:50051"
+  ]
+}

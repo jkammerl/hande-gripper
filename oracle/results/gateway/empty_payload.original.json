@@ -1,0 +1,35 @@
+{
+  "replies": [
+    {
+      "after_s": 0.29,
+      "key": "gripper_cmd",
+      "encoding": "zenoh/bytes",
+      "payload_hex": "0a09535543434545444544120b0a090a00120568616e64652001",
+      "as_GripperCmdResult": "status: \"SUCCEEDED\"\nstate {\n  header {\n    stamp {\n    }\n    frame_id: \"hande\"\n  }\n}\nreached_goal: true\n"
+    }
+  ],
+  "query_s": 0.29,
+  "goals": [
+    {
+      "name": [],
+      "position": [],
+      "velocity": [],
+      "effort": [],
+      "frame_id": ""
+    }
+  ],
+  "gateway_log_tail": [
+    "[ZENOH QUERY] Responding on key: 'gripper_cmd' (26 bytes): goo.gle/debugstr    status: \"SUCCEEDED\" state { header { stamp { } frame_id: \"hande\" } } reached_goal: true",
+    "[ZENOH QUERY] Replied successfully.",
+    "========================================================",
+    "[INFO] [1790811608.729614217] [aquarium_gateway]: Starting aquarium_gateway...",
+    "[INFO] [1790811608.732779173] [aquarium_gateway]: Resource registration skipped (resource_name or capability empty).",
+    "[INFO] [1790811608.763668399] [aquarium_gateway]: Loading configuration: /workspace/aquarium.yaml",
+    "[INFO] [1790811608.801977536] [aquarium_gateway]: ZENOH: Opening session (mode: peer, connect: [\"tcp/zenoh-router:7447\"])...",
+    "[INFO] [1790811608.846018918] [aquarium_gateway]: ZENOH: Mapped queryable on key 'gripper_cmd'",
+    "[INFO] [1790811608.846229585] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811608.846319918] [aquarium_gateway]:   aquarium_gateway online",
+    "[INFO] [1790811608.846372502] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811608.921461527] [aquarium_gateway]: GRPC: Server listening on 0.0.0.0:50051"
+  ]
+}

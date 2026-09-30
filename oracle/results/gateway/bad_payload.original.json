@@ -1,0 +1,19 @@
+{
+  "replies": [],
+  "query_s": 0.01,
+  "goals": [],
+  "gateway_log_tail": [
+    "[ZENOH QUERY] Received query on: gripper_cmd",
+    "[ZENOH QUERY] Payload size: 2 bytes",
+    "[INFO] [1790811534.353050662] [aquarium_gateway]: Starting aquarium_gateway...",
+    "[INFO] [1790811534.357709867] [aquarium_gateway]: Resource registration skipped (resource_name or capability empty).",
+    "[INFO] [1790811534.386901719] [aquarium_gateway]: Loading configuration: /workspace/aquarium.yaml",
+    "[INFO] [1790811534.417423821] [aquarium_gateway]: ZENOH: Opening session (mode: peer, connect: [\"tcp/zenoh-router:7447\"])...",
+    "[INFO] [1790811534.458066748] [aquarium_gateway]: ZENOH: Mapped queryable on key 'gripper_cmd'",
+    "[INFO] [1790811534.458289789] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811534.458353539] [aquarium_gateway]:   aquarium_gateway online",
+    "[INFO] [1790811534.458407956] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811534.510118249] [aquarium_gateway]: GRPC: Server listening on 0.0.0.0:50051",
+    "ZENOH ERROR: Failed to dynamically deserialize Protobuf payload."
+  ]
+}

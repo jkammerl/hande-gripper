@@ -1,0 +1,39 @@
+{
+  "replies": [
+    {
+      "after_s": 0.28,
+      "key": "gripper_cmd",
+      "encoding": "zenoh/bytes",
+      "payload_hex": "0a09535543434545444544124a0a090a00120568616e6465121f726f626f7469715f68616e64655f6c6566745f66696e6765725f6a6f696e741a089a9999999999993f220800000000000000002a08000000000000e03f2001",
+      "as_GripperCmdResult": "status: \"SUCCEEDED\"\nstate {\n  header {\n    stamp {\n    }\n    frame_id: \"hande\"\n  }\n  name: \"robotiq_hande_left_finger_joint\"\n  position: 0.025\n  velocity: 0\n  effort: 0.5\n}\nreached_goal: true\n"
+    }
+  ],
+  "query_s": 0.28,
+  "goals": [
+    {
+      "name": [
+        "robotiq_hande_left_finger_joint"
+      ],
+      "position": [
+        0.025
+      ],
+      "velocity": [],
+      "effort": [],
+      "frame_id": ""
+    }
+  ],
+  "gateway_log_tail": [
+    "[ZENOH QUERY] Responding on key: 'gripper_cmd' (89 bytes): goo.gle/debugproto   status: \"SUCCEEDED\" state { header { stamp { } frame_id: \"hande\" } name: \"robotiq_hande_left_finger_joint\" position: 0.025 velocity: 0 effort: 0.5 } reached_goal: true",
+    "[ZENOH QUERY] Replied successfully.",
+    "========================================================",
+    "[INFO] [1790811322.374151185] [aquarium_gateway]: Starting aquarium_gateway...",
+    "[INFO] [1790811322.377283099] [aquarium_gateway]: Resource registration skipped (resource_name or capability empty).",
+    "[INFO] [1790811322.405413327] [aquarium_gateway]: Loading configuration: /workspace/aquarium.yaml",
+    "[INFO] [1790811322.431092432] [aquarium_gateway]: ZENOH: Opening session (mode: peer, connect: [\"tcp/zenoh-router:7447\"])...",
+    "[INFO] [1790811322.460166493] [aquarium_gateway]: ZENOH: Mapped queryable on key 'gripper_cmd'",
+    "[INFO] [1790811322.460995326] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811322.461237326] [aquarium_gateway]:   aquarium_gateway online",
+    "[INFO] [1790811322.461344742] [aquarium_gateway]: ===============================================",
+    "[INFO] [1790811322.516530825] [aquarium_gateway]: GRPC: Server listening on 0.0.0.0:50051"
+  ]
+}
