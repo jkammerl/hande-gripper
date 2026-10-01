@@ -52,6 +52,7 @@ target_link_libraries(gripper_cmd_skill_main
   gripper_cmd_skill_protos
   zenohcxx::zenohc
 )
+add_dependencies(gripper_cmd_skill_main gripper_cmd_skill_skill_config)
 install(
   TARGETS gripper_cmd_skill_main
   DESTINATION lib/${PROJECT_NAME}

@@ -74,7 +74,7 @@ std::optional<absl::Duration> QueryTimeoutFromEnv() {
 using FirstReply = std::optional<zenoh::Reply>;
 
 absl::StatusOr<FirstReply> ReceiveFirstReply(
-    const zenoh::FifoHandler<zenoh::Reply>& replies,
+    const zenoh::channels::FifoHandler<zenoh::Reply>& replies,
     std::optional<absl::Duration> timeout) {
   if (!timeout.has_value()) {
     auto reply = replies.recv();
@@ -89,8 +89,8 @@ absl::StatusOr<FirstReply> ReceiveFirstReply(
     if (std::holds_alternative<zenoh::Reply>(reply)) {
       return FirstReply(std::move(std::get<zenoh::Reply>(reply)));
     }
-    if (std::get<zenoh::RecvError>(reply) ==
-        zenoh::RecvError::Z_DISCONNECTED) {
+    if (std::get<zenoh::channels::RecvError>(reply) ==
+        zenoh::channels::RecvError::Z_DISCONNECTED) {
       return FirstReply();
     }
     absl::SleepFor(absl::Milliseconds(5));
@@ -144,7 +144,7 @@ absl::StatusOr<GripperCmdResult> CallGateway(
     options.timeout_ms = absl::ToInt64Milliseconds(*timeout + absl::Seconds(1));
   }
   LOG(INFO) << "Sending Zenoh query to key: " << kQueryKey;
-  std::optional<zenoh::FifoHandler<zenoh::Reply>> replies;
+  std::optional<zenoh::channels::FifoHandler<zenoh::Reply>> replies;
   try {
     replies.emplace(session->get(zenoh::KeyExpr(kQueryKey), "",
                                  zenoh::channels::FifoChannel(16),

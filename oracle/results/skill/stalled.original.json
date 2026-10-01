@@ -1,0 +1,14 @@
+{
+  "done": true,
+  "captured_queries": [
+    {
+      "key": "gripper_cmd",
+      "parameters": "",
+      "payload_hex": "0a2b121f726f626f7469715f68616e64655f6c6566745f66696e6765725f6a6f696e741a080000000000000000",
+      "encoding": "zenoh/bytes",
+      "attachment_hex": null
+    }
+  ],
+  "result_type": "type.googleapis.com/ai.intrinsic.GripperCmdResult",
+  "result": "status: \"SUCCEEDED\"\nstate {\n  name: \"robotiq_hande_left_finger_joint\"\n  position: 0.0249\n  effort: 1.5\n}\nstalled: true\n"
+}
