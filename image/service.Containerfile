@@ -30,7 +30,7 @@ COPY image/patches /tmp/patches
 RUN if [ "${VARIANT}" = real ]; then \
       git clone --depth 1 -b ${ROBOTIQ_HANDE_TAG} https://github.com/AGH-CEAI/robotiq_hande_driver src/robotiq_hande_driver \
       && git clone --depth 1 -b ${ROBOTIQ_HANDE_TAG} https://github.com/AGH-CEAI/robotiq_hande_description src/robotiq_hande_description \
-      && patch -d src/robotiq_hande_driver -p1 < /tmp/patches/robotiq_hande_driver_controller_config.patch; \
+      && for p in /tmp/patches/robotiq_hande_driver_*.patch; do patch -d src/robotiq_hande_driver -p1 < $p; done; \
     elif [ "${VARIANT}" != sim ]; then echo "VARIANT must be real or sim" >&2; exit 1; fi
 
 # Protos: the simulation driver's descriptor set and the entrypoint's config protos.

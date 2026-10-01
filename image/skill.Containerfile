@@ -32,6 +32,7 @@ RUN apt-get update \
     && dpkg --set-selections < /skill_exec_apt_packages.txt \
     && apt-get dselect-upgrade -y \
     && apt-get install -y --no-install-recommends ros-${ROS_DISTRO}-zenoh-cpp-vendor \
+       ros-${ROS_DISTRO}-rmw-zenoh-cpp \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=build /opt/ros/underlay/install /opt/ros/underlay/install
 COPY --from=build ${SKILL_WORKSPACE}/install ${SKILL_WORKSPACE}/install

@@ -1,0 +1,18 @@
+--- a/robotiq_hande_driver/CMakeLists.txt
++++ b/robotiq_hande_driver/CMakeLists.txt
+@@ -43,7 +43,14 @@
+ target_include_directories(
+   robotiq_hande_driver PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/hardware/include>
+                               $<INSTALL_INTERFACE:include>)
+-ament_target_dependencies(${PROJECT_NAME} PUBLIC ${HW_IF_INCLUDE_DEPENDS})
++# ament_target_dependencies() was removed in ROS 2 Lyrical.
++target_link_libraries(
++  ${PROJECT_NAME}
++  PUBLIC hardware_interface::hardware_interface
++         pluginlib::pluginlib
++         rclcpp::rclcpp
++         rclcpp_lifecycle::rclcpp_lifecycle
++         rcpputils::rcpputils)
+ 
+ pluginlib_export_plugin_description_file(hardware_interface ros2_control_plugin.xml)
+ 

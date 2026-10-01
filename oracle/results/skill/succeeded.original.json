@@ -10,5 +10,5 @@
     }
   ],
   "result_type": "type.googleapis.com/ai.intrinsic.GripperCmdResult",
-  "result": "status: \"SUCCEEDED\"\nstate {\n  name: \"robotiq_hande_left_finger_joint\"\n  position: 0.0249\n  effort: 1.5\n}\nreached_goal: true\n"
+  "result": "status: \"SUCCEEDED\"\nstate {\n  header {\n    stamp {\n    }\n  }\n  position: 0.025\n  effort: 1.06453322170556e-309\n}\nreached_goal: true\n"
 }

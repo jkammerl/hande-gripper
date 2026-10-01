@@ -9,8 +9,6 @@
       "attachment_hex": null
     }
   ],
-  "error": {
-    "code": 13,
-    "message": "Skill ai.intrinsic.gripper_cmd_skill returned an error during Execute (code: INTERNAL). Message: Skill action failed: ABORTED"
-  }
+  "result_type": "type.googleapis.com/ai.intrinsic.GripperCmdResult",
+  "result": "status: \"SUCCEEDED\"\nstate {\n  header {\n    stamp {\n    }\n  }\n  position: 0.025\n  effort: 0\n}\nreached_goal: true\n"
 }
